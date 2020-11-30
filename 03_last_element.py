@@ -7,3 +7,8 @@ def last_element(lst):
         >>> last_element([]) is None
         True
     """
+
+    # considered using ternary, but realized function return None by default
+    
+    if len(lst) > 0:
+        return lst[-1]
