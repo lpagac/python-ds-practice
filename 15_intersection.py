@@ -13,4 +13,7 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
-    return [num for num in l1 if num in l2]
+    l2s = set(l2)
+    return [num for num in l1 if num in l2s]
+
+    #now it is O(l1 + l2 + 1) because set is O(1) to look things up

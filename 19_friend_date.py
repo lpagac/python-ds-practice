@@ -16,9 +16,13 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+# use set
+# using & operation specific to sets (operator overloading the & means other things in different contexts)
+1 + 2
+"cat" + "dog"
+    return bool(set(a[2])&set(a[1]))
+    # for hobby in a[2]:
+    #     if hobby in b[2]:
+    #         return True
 
-    for hobby in a[2]:
-        if hobby in b[2]:
-            return True
-
-    return False
+    # return False

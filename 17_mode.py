@@ -11,15 +11,24 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+# set not neccessary
+    # unique_numbers = set(nums)
 
-    unique_numbers = set(nums)
+    # most_com_num = None
+    # most_com_count = 0
 
-    most_com_num = None
-    most_com_count = 0
+    # for num in unique_numbers:
+    #     if (nums.count(num) > most_com_count):
+    #         most_com_num = num
+    #         most_com_count = nums.count(num)
 
-    for num in unique_numbers:
-        if (nums.count(num) > most_com_count):
-            most_com_num = num
-            most_com_count = nums.count(num)
+    # return most_com_num
 
-    return most_com_num
+    def val_by_key(key):
+        return freq[key]
+
+    freq = {}
+    for n in nums:
+        freq[n] = freq.get(n, 0) + 1
+    return max(nums, key=val_by_key)
+    # key function

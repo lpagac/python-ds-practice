@@ -24,3 +24,4 @@ def partition(lst, fn):
         [value for value in lst if fn(value)],
         [value for value in lst if not fn(value)]
         ]
+# works as long as func is pure (returns same results and has no side effects)
