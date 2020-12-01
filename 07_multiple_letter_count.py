@@ -8,6 +8,7 @@ def multiple_letter_count(phrase):
         {'Y': 1, 'a': 1, 'y': 1}
     """
 
+    # O(n^2) solution currently, can implement freq counter for O(n) answer
     return {letter: phrase.count(letter) for letter in phrase}
 
     # Considered looping over a set (improvement for runtime?)
