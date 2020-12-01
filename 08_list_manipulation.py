@@ -41,6 +41,7 @@ def list_manipulation(lst, command, location, value=None):
         True
     """
 
+    # Could change to tuples for performance boost
     if (command not in ["add", "remove"] or
        location not in ["beginning", "end"]):
 
